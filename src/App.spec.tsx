@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-describe("Testa o componente App", () => {
-  test("Devem haver dois títulos na página", async () => {
+describe("Test the App component", () => {
+  test("Must have two titles in page", async () => {
     render(<App />);
 
     const titles = await screen.findAllByRole("heading");
@@ -10,7 +10,7 @@ describe("Testa o componente App", () => {
     expect(titles).toHaveLength(2);
   });
 
-  test("Deve haver um título na página com o texto 'Hello World'", async () => {
+  test("Must have a title with text 'Hello World'", async () => {
     render(<App />);
 
     const title = await screen.findByRole("heading", {
